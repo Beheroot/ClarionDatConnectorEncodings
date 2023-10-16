@@ -21,4 +21,5 @@ Pass the "DAT" file to the constructor "ClarionFileData". Call class method "Get
 
 For sample Usage Check out [SampleUsage](https://github.com/rogergarrison/ClarionDatConnector/blob/master/SampleUsage/).
 
-
+###fork###
+It has class that is speciflicly taliored to read files that has Mazovia enocoding in it. Class has char array that can be switched to any other 8bit encoding to read varous non-latin charters. 
