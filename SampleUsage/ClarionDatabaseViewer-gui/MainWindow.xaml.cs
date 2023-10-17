@@ -13,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 using ClarionDatConnector;
 using Microsoft.Win32;
 
@@ -30,8 +30,9 @@ namespace ClarionDatabaseViewer_gui
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void bt_wypluj_Click(object sender, RoutedEventArgs e)
         {
+
             DataTable dt = clarionFile.ClarionData;
             StringBuilder sb = new StringBuilder();
 
@@ -44,11 +45,15 @@ namespace ClarionDatabaseViewer_gui
                 IEnumerable<string> fields = row.ItemArray.Select(field => field.ToString());
                 sb.AppendLine(string.Join(";", fields));
             }
-
-            File.WriteAllText("c:\\temp\\test.csv", sb.ToString());
+            if (!Directory.Exists(@"c:\temp"))
+                Directory.CreateDirectory(@"c:\temp");
+            string filename = Path.GetFileNameWithoutExtension(this.tb_PLIK.Text)+".csv";
+            string sciezka = "c:\\temp\\" + filename;
+            File.WriteAllText(sciezka, sb.ToString());
+            MessageBox.Show("skoñczone " + sciezka);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void bt_Wybierz_Click_1(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)

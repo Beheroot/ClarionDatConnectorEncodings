@@ -13,9 +13,9 @@
                   IsReadOnly="True" Margin="0,95,0,0">
             <!-- AutoGenerateColumns="False" -->
         </DataGrid>
-        <Button  x:Name="bt_wypluj" Content="Wypluj" HorizontalAlignment="Left" Margin="6,62,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="Button_Click"/>
-        <Button x:Name="bt_Wybierz" Content="wybier plik" HorizontalAlignment="Left" Height="26" Margin="6,3,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <TextBox x:Name="tb_PLIK" HorizontalAlignment="Left" Height="26" Margin="72,3,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="223"/>
+        <Button  x:Name="bt_wypluj" Content="Wypluj" HorizontalAlignment="Left" Margin="6,62,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="bt_wypluj_Click"/>
+        <Button x:Name="bt_Wybierz" Content="wybier plik" HorizontalAlignment="Left" Height="26" Margin="6,3,0,0" VerticalAlignment="Top" Click="bt_Wybierz_Click_1"/>
+        <TextBox x:Name="tb_PLIK" HorizontalAlignment="Left" Height="26" Margin="72,3,0,0" TextWrapping="Wrap" Text="(wybierz plik)" VerticalAlignment="Top" Width="223"/>
         <Button x:Name="bt_Zaladuj" Content="Załaduj dane" HorizontalAlignment="Left" Margin="6,34,0,0" VerticalAlignment="Top" Height="23" Width="161" Click="bt_Zaladuj_Click"/>
 
     </Grid>
